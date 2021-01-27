@@ -15,15 +15,20 @@ namespace InventoryManagement.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Rules.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Contact.";
 
+            return View();
+        }
+        public ActionResult Inventory()
+        {
+            ViewBag.Message = "Inventory.";
             return View();
         }
     }

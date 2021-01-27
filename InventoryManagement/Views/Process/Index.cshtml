@@ -1,0 +1,41 @@
+﻿@model InventoryManagement.ViewModel.InventoryViewModel
+
+@{
+    ViewBag.Title = "Process complete";
+}
+
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StockItem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sellin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quality)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model.InventoriesList)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StockItem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sellin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quality)
+            </td>
+
+        </tr>
+    }
+
+</table>

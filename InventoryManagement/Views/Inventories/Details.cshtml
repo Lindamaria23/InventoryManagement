@@ -1,0 +1,43 @@
+﻿@model InventoryManagement.ViewModel.InventoryViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<div>
+    <h4>Inventory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StockItem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StockItem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sellin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sellin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quality)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
